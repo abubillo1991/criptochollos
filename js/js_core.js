@@ -1,4 +1,4 @@
-
+get_query_parameters();
 
 for (let _category of _categories) {
     // <!-- *** 001 - Categorias -->
