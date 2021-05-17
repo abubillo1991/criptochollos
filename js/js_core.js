@@ -28,7 +28,7 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
         add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price'])
         _warticle_iterator += 1
     }
-    
+
     if (c_id == null || c_id == _article['category_id']) {
         // <!-- *** 001 - Chollos -->
         add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
@@ -37,22 +37,6 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
     _articles_reviewed += 1
 }
 
-/*for (let _article of _articles) {
-
-    if (_warticle_iterator <= WARTICLES_PER_PAGE) {
-        // <!-- *** 002 - Chollos widget -->
-        add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price'])
-        _warticle_iterator += 1
-    }
-
-    if (_article_iterator <= (ARTICLES_PER_PAGE*_article_block_added)) {
-        if (c_id == null || c_id == _article['category_id']) {
-            // <!-- *** 001 - Chollos -->
-            add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
-            _article_iterator += 1
-        }
-    }
-}*/
 
 
 setInterval(function () {
