@@ -41,8 +41,13 @@ function add_widget_card(id, name, category_id, status, image, price) {
   document.getElementById("_widget_card_list").innerHTML += _article_card 
 }
 
-function update_search_information(articles_displayed, article_quantity, page, articles_per_page){
-  document.getElementById("_widget_card_list").innerHTML += 'Mostrando '+articles_per_page+' de '+article_quantity+' chollos'
+function update_search_information(c_id, q, page, articles_per_page){
   document.getElementById("amount_article_displayed").innerHTML += '<select>'+articles_per_page+'</select>'
+
+  window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        alert("you're at the bottom of the page");
+    }
+  };
   
 }
