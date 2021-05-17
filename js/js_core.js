@@ -17,7 +17,7 @@ for (let _category of _categories) {
 
 for (let _article of _articles) {
     if (c_id == null || c_id == _article['category_id']) {
-        if (_article_quantity > (ARTICLES_PER_PAGE * (page - 1)) && _article_quantity < (ARTICLES_PER_PAGE * (page))) {
+        if ((_article_quantity > (ARTICLES_PER_PAGE * (page - 1)) && _article_quantity < (ARTICLES_PER_PAGE * (page))) || page == null) {
             // <!-- *** 001 - Chollos -->
             add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
         }
@@ -28,5 +28,5 @@ for (let _article of _articles) {
     add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price'])
 }
 
-var articles_displayed = parseInt(_article_quantity / page)
+var articles_displayed = parseInt(_article_quantity / page);
 update_search_information(articles_displayed, article_quantity, page, ARTICLES_PER_PAGE);
