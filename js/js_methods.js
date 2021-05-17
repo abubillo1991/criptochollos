@@ -3,7 +3,7 @@ function add_nav_category_001(id, name, url) {
 }
 
 function add_select_category_002(name) {
-  document.getElementById("select_categories_002").innerHTML += '<option value="'+id+'">' + name + '</select>';
+  document.getElementById("select_categories_002").innerHTML += '<option value="'+id+'">' + name + '</option>';
 }
 
 function add_product_card(name, intro_description, image, price) {
