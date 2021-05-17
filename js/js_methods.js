@@ -9,7 +9,7 @@ function get_query_parameters(){
 }
 
 function add_nav_category_001(id, name, url) {
-  document.getElementById("nav_categories_001").innerHTML += '<li class="nav-links__item "><a class="nav-links__item-link" href="#"><div class="nav-links__item-body">' + name + '</div></a></li>';
+  document.getElementById("nav_categories_001").innerHTML += '<li class="nav-links__item "><a class="nav-links__item-link" href="index.html?c_id='+id+'"><div class="nav-links__item-body">' + name + '</div></a></li>';
 }
 
 function add_select_category_002(id, name, url) {
@@ -17,11 +17,11 @@ function add_select_category_002(id, name, url) {
 }
 
 function add_ul_category_003(id, name, url) {
-  document.getElementById("ul_categories_003").innerHTML += '<li class="departments__item"><a class="departments__item-link" href="">' + name + '</a></li>';
+  document.getElementById("ul_categories_003").innerHTML += '<li class="departments__item"><a class="departments__item-link" href="index.html?c_id='+id+'">' + name + '</a></li>';
 }
 
 function add_ul_category_004(id, name, url) {
-  document.getElementById("ul_categories_004").innerHTML += '<li class="filter-categories__item filter-categories__item--child"><a href="">' + name + '</a><div class="filter-categories__counter">-</div></li>';
+  document.getElementById("ul_categories_004").innerHTML += '<li class="filter-categories__item filter-categories__item--child"><a href="index.html?c_id='+id+'">' + name + '</a><div class="filter-categories__counter">-</div></li>';
 }
 
 function add_article_card(id, name, category_id, intro_description, date, score, status, image, price) {
