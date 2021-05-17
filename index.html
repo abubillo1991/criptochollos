@@ -891,30 +891,17 @@
     <script>
         setInterval(function(){
   
-        var totalHeight, currentScroll, visibleHeight;
-        
-        if (document.documentElement.scrollTop)
-            { currentScroll = document.documentElement.scrollTop; }
-        else
-            { currentScroll = document.body.scrollTop; }
-        
-        totalHeight = document.body.offsetHeight;
-        visibleHeight = document.documentElement.clientHeight;
-        
-        $('#data').html(
-            'total height: ' + totalHeight + '<br />' +
-            'visibleHeight : ' + visibleHeight + '<br />' +
-            'currentScroll:' + currentScroll);
+            window.onscroll = function()
+ {
+    var scrollHeight, totalHeight;
+    scrollHeight = document.body.scrollHeight;
+    totalHeight = window.scrollY + window.innerHeight;
 
-        console.log(totalHeight + '/' + visibleHeight + '/' + currentScroll);
-        if (totalHeight <= currentScroll + visibleHeight )
-        {
-            console.log('hi');
-        }
-        else
-        {
-            console.log('bye');;
-        }
+    if(totalHeight >= scrollHeight)
+    {
+        console.log("at the bottom");
+    }
+}
   
                 }, 100);
 
