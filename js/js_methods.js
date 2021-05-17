@@ -3,8 +3,10 @@ function get_query_parameters(){
   var url = new URL(url_string);
   var q = url.searchParams.get("q");
   var c_id = url.searchParams.get("c_id");
+  var page = url.searchParams.get("page");
   console.log(q)
   console.log(c_id)
+  console.log(page)
 }
 
 function add_nav_category_001(id, name, url) {
