@@ -13,7 +13,7 @@ for (let _category of _categories) {
 }
 
 for (let _article of _articles) {
-    if (c_id == null || c_id == _article['category_id']){
+    if (c_id == null && c_id == _article['category_id']){
         // <!-- *** 001 - Chollos -->
         add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
     }
