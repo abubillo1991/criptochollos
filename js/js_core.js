@@ -45,7 +45,7 @@ window.onscroll = function () {
 
     if (totalHeight >= scrollHeight) {
         console.log('bottom')
-        while(_articles_displayed < ARTICLES_PER_PAGE && _articles_length >= _articles_reviewed){
+        while(_articles_displayed < ARTICLES_PER_PAGE && _articles_length > _articles_reviewed){
             console.log(_articles_length + '/' + _articles_reviewed);
             _article=_articles[_articles_reviewed];
             if (c_id == null || c_id == _article['category_id']) {
