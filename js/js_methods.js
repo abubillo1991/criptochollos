@@ -41,6 +41,8 @@ function add_widget_card(id, name, category_id, status, image, price) {
   document.getElementById("_widget_card_list").innerHTML += _article_card 
 }
 
-function update_article_displayed(articles_displayed, article_quantity){
-  document.getElementById("_widget_card_list").innerHTML += 'Mostrando '+articles_displayed+' de '+article_quantity+' chollos'
+function update_search_information(articles_displayed, article_quantity, page, articles_per_page){
+  document.getElementById("_widget_card_list").innerHTML += 'Mostrando '+articles_per_page+' de '+article_quantity+' chollos'
+  document.getElementById("amount_article_displayed").innerHTML += '<select>'+articles_per_page+'</select>'
+  
 }
