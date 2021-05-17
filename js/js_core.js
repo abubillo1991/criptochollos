@@ -1,8 +1,8 @@
 
-// <!-- *** 001 - Categorias -->
+
 for (let _category of _categories) {
-    console.log(_category['name']);
-    add_nav_category(_category['name']);
-  }
-
-
+    // <!-- *** 001 - Categorias -->
+    add_nav_category_001(_category['id'],_category['name'],_category['url']);
+    // <!-- *** 002 - Categorias -->
+    add_select_category_002(_category['id'],_category['name'],_category['url']);
+}
