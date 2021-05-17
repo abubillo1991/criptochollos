@@ -40,3 +40,7 @@ function add_widget_card(id, name, category_id, status, image, price) {
   _article_card='<div class="widget-products__item"><div class="widget-products__image"><div class="product-image"><a href="product.html" class="product-image__body"><img class="product-image__img" src="'+image+'" alt=""></a></div></div><div class="widget-products__info"><div class="widget-products__name"><a href="product.html">'+name+'</a></div><div class="widget-products__prices">'+price+'</div></div></div>'
   document.getElementById("_widget_card_list").innerHTML += _article_card 
 }
+
+function update_article_displayed(articles_displayed, article_quantity){
+  document.getElementById("_widget_card_list").innerHTML += 'Mostrando '+articles_displayed+' de '+article_quantity+' chollos'
+}
