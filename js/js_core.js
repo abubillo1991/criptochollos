@@ -24,8 +24,8 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
     
     if (_warticle_iterator <= WARTICLES_PER_PAGE) {
         // <!-- *** 002 - Chollos widget -->
-        add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price'])
-        _warticle_iterator += 1
+        add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price']);
+        _warticle_iterator += 1;
     }
 
     if (c_id == null || c_id == _article['category_id']) {
@@ -33,7 +33,7 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
         add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
         _articles_displayed += 1
     }
-    _articles_reviewed += 1
+    _articles_reviewed += 1;
 }
 
 setInterval(function () {
@@ -42,18 +42,19 @@ setInterval(function () {
         var scrollHeight, totalHeight;
         scrollHeight = document.body.scrollHeight;
         totalHeight = window.scrollY + window.innerHeight;
-        _articles_displayed = 0
+        _articles_displayed = 0;
 
-        if (totalHeight >= scrollHeight && _articles_length > _articles_reviewed) {
+        console.log(_articles_length + '/' + _articles_length);
+        if (totalHeight >= scrollHeight && _articles_length > _articles_length) {
             console.log('bottom')
             while(_articles_displayed < ARTICLES_PER_PAGE){
-                _article=_articles[_articles_reviewed]
+                _article=_articles[_articles_reviewed];
                 if (c_id == null || c_id == _article['category_id']) {
                     // <!-- *** 001 - Chollos -->
                     add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
-                    _articles_displayed += 1
+                    _articles_displayed += 1;
                 }
-                _articles_reviewed += 1
+                _articles_reviewed += 1;
             }
         }
     }
