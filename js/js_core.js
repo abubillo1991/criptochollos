@@ -5,8 +5,6 @@ var WARTICLES_PER_PAGE = 10
 let { c_id, q } = get_query_parameters();
 var _article_iterator = 1
 var _warticle_iterator = 1
-var _article_block_added = 1
-var _last_article_id = 0
 var _articles_displayed = 0
 var _articles_reviewed = 0
 
@@ -24,6 +22,13 @@ for (let _category of _categories) {
 
 while(_articles_displayed < ARTICLES_PER_PAGE){
     _article=_articles[_articles_reviewed]
+    
+    if (_warticle_iterator <= WARTICLES_PER_PAGE) {
+        // <!-- *** 002 - Chollos widget -->
+        add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price'])
+        _warticle_iterator += 1
+    }
+    
     if (c_id == null || c_id == _article['category_id']) {
         // <!-- *** 001 - Chollos -->
         add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
