@@ -31,7 +31,7 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
     if (c_id == null || c_id == _article['category_id']) {
         // <!-- *** 001 - Chollos -->
         add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
-        _articles_displayed += 1
+        _articles_displayed += 1;
     }
     _articles_reviewed += 1;
 }
@@ -44,8 +44,8 @@ setInterval(function () {
         totalHeight = window.scrollY + window.innerHeight;
         _articles_displayed = 0;
 
-        console.log(_articles_length + '/' + _articles_length);
-        if (totalHeight >= scrollHeight && _articles_length > _articles_length) {
+        console.log(_articles_length + '/' + _articles_reviewed);
+        if (totalHeight >= scrollHeight && _articles_length > _articles_reviewed) {
             console.log('bottom')
             while(_articles_displayed < ARTICLES_PER_PAGE){
                 _article=_articles[_articles_reviewed];
