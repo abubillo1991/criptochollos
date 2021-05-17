@@ -889,11 +889,33 @@
     <script src="js/js_core.js" type="text/javascript"></script>
 
     <script>
-        window.onscroll = function(ev) {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                alert("you're at the bottom of the page 1");
-            }
-        };
+        setInterval(function(){
+  
+        var totalHeight, currentScroll, visibleHeight;
+        
+        if (document.documentElement.scrollTop)
+            { currentScroll = document.documentElement.scrollTop; }
+        else
+            { currentScroll = document.body.scrollTop; }
+        
+        totalHeight = document.body.offsetHeight;
+        visibleHeight = document.documentElement.clientHeight;
+        
+        $('#data').html(
+            'total height: ' + totalHeight + '<br />' +
+            'visibleHeight : ' + visibleHeight + '<br />' +
+            'currentScroll:' + currentScroll);
+        if (totalHeight <= currentScroll + visibleHeight )
+        {
+            console.log('hi');
+        }
+        else
+        {
+            console.log('bye');;
+        }
+  
+                }, 100);
+
     </script>
 </body>
 
