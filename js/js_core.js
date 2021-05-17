@@ -58,6 +58,7 @@ setInterval(function () {
         totalHeight = window.scrollY + window.innerHeight;
         _articles_displayed = 0
         if (totalHeight >= scrollHeight) {
+            console.log('bottom')
             while(_articles_displayed < ARTICLES_PER_PAGE){
                 _article=_articles[_articles_reviewed]
                 if (c_id == null || c_id == _article['category_id']) {
