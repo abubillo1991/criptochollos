@@ -253,7 +253,9 @@
                                         <div class="view-options__control">
                                             <label for="">Mostrar</label>
                                             <div>
-                                                <select class="form-control form-control-sm" name="" id="amount_article_displayed">
+                                                <select class="form-control form-control-sm" name="">
+                                                    <option value="Disponible"></option>
+                                                    <option value="Agotado"></option>
                                                 </select>
                                             </div>
                                         </div>
@@ -886,6 +888,13 @@
     <script src="js/js_data.js" type="text/javascript"></script>
     <script src="js/js_core.js" type="text/javascript"></script>
 
+    <script>
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                alert("you're at the bottom of the page");
+            }
+        };
+    </script>
 </body>
 
 </html>

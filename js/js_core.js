@@ -1,4 +1,4 @@
-var ARTICLES_PER_PAGE = 20
+var ARTICLES_PER_PAGE = 30
 var WARTICLES_PER_PAGE = 10
 
 // <!-- *** Get query parameters -->
@@ -37,9 +37,3 @@ for (let _article of _articles) {
 }
 
 update_search_information(c_id, q, ARTICLES_PER_PAGE);
-
-window.onscroll = function (ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        alert("you're at the bottom of the page");
-    }
-};
