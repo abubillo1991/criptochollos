@@ -1,1 +1,8 @@
-add_nav_category(_categories[0]['name']);
+
+// <!-- *** 001 - Categorias -->
+for (let _category of _categories) {
+    console.log(_category['name']);
+    add_nav_category(_category['name']);
+  }
+
+
