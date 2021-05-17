@@ -35,7 +35,7 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
     }
     _articles_reviewed += 1
 }
-
+console.log(_articles.length);
 
 
 setInterval(function () {
