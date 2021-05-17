@@ -3,7 +3,6 @@ var WARTICLES_PER_PAGE = 10
 
 // <!-- *** Get query parameters -->
 let { c_id, q } = get_query_parameters();
-var _article_iterator = 1
 var _warticle_iterator = 1
 var _articles_displayed = 0
 var _articles_reviewed = 0
@@ -46,6 +45,7 @@ setInterval(function () {
         scrollHeight = document.body.scrollHeight;
         totalHeight = window.scrollY + window.innerHeight;
         _articles_displayed = 0
+
         if (totalHeight >= scrollHeight) {
             console.log('bottom')
             while(_articles_displayed < ARTICLES_PER_PAGE){
