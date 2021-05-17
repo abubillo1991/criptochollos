@@ -2,7 +2,7 @@ function add_nav_category_001(id, name, url) {
   document.getElementById("nav_categories_001").innerHTML += '<li class="nav-links__item "><a class="nav-links__item-link" href="#"><div class="nav-links__item-body">' + name + '</div></a></li>';
 }
 
-function add_select_category_002(name) {
+function add_select_category_002(id, name, url) {
   document.getElementById("select_categories_002").innerHTML += '<option value="'+id+'">' + name + '</option>';
 }
 
