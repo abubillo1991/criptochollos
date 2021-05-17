@@ -6,7 +6,7 @@ let { c_id, q } = get_query_parameters();
 var _warticle_iterator = 1
 var _articles_displayed = 0
 var _articles_reviewed = 0
-
+var _articles_length = _articles.length
 
 for (let _category of _categories) {
     // <!-- *** 001 - Categorias -->
@@ -35,8 +35,6 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
     }
     _articles_reviewed += 1
 }
-console.log(_articles.length);
-
 
 setInterval(function () {
 
@@ -46,7 +44,7 @@ setInterval(function () {
         totalHeight = window.scrollY + window.innerHeight;
         _articles_displayed = 0
 
-        if (totalHeight >= scrollHeight) {
+        if (totalHeight >= scrollHeight && _articles_length > _articles_reviewed) {
             console.log('bottom')
             while(_articles_displayed < ARTICLES_PER_PAGE){
                 _article=_articles[_articles_reviewed]
