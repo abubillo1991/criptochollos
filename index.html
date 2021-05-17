@@ -254,8 +254,8 @@
                                             <label for="">Mostrar</label>
                                             <div>
                                                 <select class="form-control form-control-sm" name="">
-                                                    <option value="status_1">Disponibles</option>
-                                                    <option value="status_0">Agotados</option>
+                                                    <option value="status_1">Disponible</option>
+                                                    <option value="status_0">Agotado</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -888,24 +888,6 @@
     <script src="js/js_data.js" type="text/javascript"></script>
     <script src="js/js_core.js" type="text/javascript"></script>
 
-    <script>
-        setInterval(function(){
-  
-            window.onscroll = function()
- {
-    var scrollHeight, totalHeight;
-    scrollHeight = document.body.scrollHeight;
-    totalHeight = window.scrollY + window.innerHeight;
-
-    if(totalHeight >= scrollHeight)
-    {
-        console.log("at the bottom");
-    }
-}
-  
-                }, 100);
-
-    </script>
 </body>
 
 </html>
