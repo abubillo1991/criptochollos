@@ -1,3 +1,4 @@
+// <!-- *** Get query parameters -->
 get_query_parameters();
 
 for (let _category of _categories) {
@@ -12,8 +13,10 @@ for (let _category of _categories) {
 }
 
 for (let _article of _articles) {
-    // <!-- *** 001 - Chollos -->
-    add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
+    if (c_id == null || c_id == _article['category_id']){
+        // <!-- *** 001 - Chollos -->
+        add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
+    }
     // <!-- *** 002 - Chollos widget -->
     add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price'])
 }
