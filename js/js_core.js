@@ -35,5 +35,3 @@ for (let _article of _articles) {
         }
     }
 }
-
-update_search_information(c_id, q, ARTICLES_PER_PAGE);
