@@ -22,16 +22,14 @@ _warticles = filter_and_order_articles(_articles, c_id, q, 1, 'score');
 // TODO: ordenar por score
 for (i = 0; i < WARTICLES_PER_PAGE; i++) {
     // <!-- *** 002 - Chollos widget -->
-    add_widget_card(_articles[i]['id'], _articles[i]['name'], _articles[i]['category_id'], _articles[i]['status'], _articles[i]['image'], _articles[i]['price']);
+    add_widget_card(_warticles[i]['id'], _warticles[i]['name'], _warticles[i]['category_id'], _warticles[i]['status'], _warticles[i]['image'], _warticles[i]['price']);
 }
 
 // 1. Filtrar por categoria o por query o por disponible
 // 2. Ordenar por fecha o por relevancia
-console.log(_articles);
-_articles = filter_and_order_articles(_articles, c_id, q, s, o);
-console.log(_articles);
-var _articles_length = _articles.length;
 // 3. Mostrar
+_articles = filter_and_order_articles(_articles, c_id, q, s, o);
+var _articles_length = _articles.length;
 
 while (_articles_displayed < ARTICLES_PER_PAGE) {
     _article = _articles[_articles_reviewed];
