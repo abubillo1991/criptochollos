@@ -7,6 +7,8 @@ var _articles_displayed = 0;
 var _articles_reviewed = 0;
 var i;
 
+update_search_filters(o,s);
+
 for (let _category of _categories) {
     // <!-- *** 001 - Categorias -->
     add_nav_category_001(_category['id'], _category['name'], _category['url']);
