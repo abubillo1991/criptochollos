@@ -18,6 +18,8 @@ for (let _category of _categories) {
     add_ul_category_003(_category['id'], _category['name'], _category['url']);
     // <!-- *** 004 - Categorias -->
     add_ul_category_004(_category['id'], _category['name'], _category['url']);
+    // <!-- *** 005 - Categorias -->
+    add_div_category_005(_category['id'], _category['name'], _category['url']);
 }
 
 _warticles = filter_and_order_articles(_articles, c_id, q, 1, 'score');
