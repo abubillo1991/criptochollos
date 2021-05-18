@@ -26,7 +26,7 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
   if (o != null) {
     if (o == 'date') {
       _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-    } else {
+    } else if (o == 'score') {
       _articles = _articles.sort((a, b) => b.score - a.score);
     }
 
