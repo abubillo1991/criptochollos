@@ -23,7 +23,7 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
   }
 
   if (q != null) {
-    _articles = _articles.filter(({ description }) => true == description.includes(q));
+    _articles = _articles.filter(({ description }) => description.includes("wisi"));
     console.log("5entra");
   }
 
