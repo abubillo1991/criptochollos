@@ -11,22 +11,16 @@ function get_query_parameters() {
 }
 
 function filter_and_order_articles(_articles, c_id, q, s, o) {
-  console.log("1entra");
   if (c_id != null) {
     _articles = _articles.filter(({ category_id }) => category_id == c_id);
-    console.log("2entra");
   }
 
   if (s != null) {
     _articles = _articles.filter(({ status }) => status == s);
-    console.log("3entra");
   }
 
   if (q != null) {
     _articles = _articles.filter(({ description }) => description.includes(q) == true);
-    console.log(_articles[0]['description'].includes("Wisi"));
-
-    console.log("5entra");
   }
 
   if (o != null && o == 'date') {
