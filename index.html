@@ -228,27 +228,29 @@
                                         </div>
                                         <div class="view-options__legend" id="article_displayed"></div>
                                         <div class="view-options__divider"></div>
-                                        <div class="view-options__control">
-                                            <label for="">Ordenar por</label>
-                                            <div>
-                                                <select class="form-control form-control-sm" name="" id="">
-                                                    <option value="">Relevancia</option>
-                                                    <option value="order_by_date">Fecha de publicación</option>
-                                                </select>
+                                        <form action="index.html" method="GET">
+                                            <div class="view-options__control">
+                                                <label for="">Ordenar por</label>
+                                                <div>
+                                                    <select class="form-control form-control-sm" name="o" id="o">
+                                                        <option value="">Relevancia</option>
+                                                        <option value="date">Fecha de publicación</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="view-options__control">
-                                            <label for="">Mostrar</label>
-                                            <div>
-                                                <select class="form-control form-control-sm" name="">
-                                                    <option value="status_1">Disponible</option>
-                                                    <option value="status_0">Agotado</option>
-                                                </select>
+                                            <div class="view-options__control">
+                                                <label for="">Mostrar</label>
+                                                <div>
+                                                    <select class="form-control form-control-sm" name="s" id="s">
+                                                        <option value="1">Disponible</option>
+                                                        <option value="0">Agotado</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="widget-filters__actions d-flex">
-                                            <button class="btn btn-primary btn-sm">Filtrar</button>
-                                        </div>
+                                            <div class="view-options__control">
+                                                <button  type="submit" value="Submit" class="btn btn-primary btn-sm">Filtrar</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="products-view__list products-list" data-layout="list" data-with-features="false" data-mobile-grid-columns="2">
