@@ -1,5 +1,5 @@
 var ARTICLES_PER_PAGE = 5
-var WARTICLES_PER_PAGE = 10
+var WARTICLES_PER_PAGE = 5
 
 // <!-- *** Get query parameters -->
 let { c_id, q } = get_query_parameters();
@@ -18,6 +18,9 @@ for (let _category of _categories) {
     // <!-- *** 004 - Categorias -->
     add_ul_category_004(_category['id'], _category['name'], _category['url']);
 }
+
+// 1. Filtrar por categoria o por query o por disponible
+// 2. Ordenar por fecha o por relevancia
 
 while(_articles_displayed < ARTICLES_PER_PAGE){
     _article=_articles[_articles_reviewed]
