@@ -22,13 +22,13 @@ for (let _category of _categories) {
 // 1. Filtrar por categoria o por query o por disponible
 // 2. Ordenar por fecha o por relevancia
 console.log(_articles);
-_articles = filter_and_order_articles(_articles, c_id, q, s, o)
+_articles = filter_and_order_articles(_articles, c_id, q, s, o);
 console.log(_articles);
-var _articles_length = _articles.length
+var _articles_length = _articles.length;
 // 3. Mostrar
 
 while(_articles_displayed < ARTICLES_PER_PAGE){
-    _article=_articles[_articles_reviewed]
+    _article=_articles[_articles_reviewed];
     
     if (_warticle_iterator <= WARTICLES_PER_PAGE) {
         // <!-- *** 002 - Chollos widget -->
@@ -59,7 +59,7 @@ window.onscroll = function () {
             // <!-- *** 001 - Chollos -->
             add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
             _articles_displayed += 1;
-            
+
             _articles_reviewed += 1;
         }
     }

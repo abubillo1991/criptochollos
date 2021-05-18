@@ -11,19 +11,20 @@ function get_query_parameters() {
 }
 
 function filter_and_order_articles(_articles, c_id, q, s, o) {
+  console.log("1entra");
   if (c_id != null) {
     _articles = _articles.filter(x => x.category = c_id);
-    console.log("entra")
+    console.log("2entra");
   }
 
   if (s != null) {
     _articles = _articles.filter(x => x.status = s);
-    console.log("entra")
+    console.log("3entra");
   }
 
   if (o != null && o == 'date') {
     _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-    console.log("entra")
+    console.log("4entra");
   }
 
   // TODO: falta la busqueda
