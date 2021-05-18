@@ -13,7 +13,7 @@ function get_query_parameters() {
 function filter_and_order_articles(_articles, c_id, q, s, o) {
   console.log("1entra");
   if (c_id != null) {
-    _articles = _articles.filter(x => x.category = c_id);
+    _articles = _articles.filter(x => x.category_id = c_id);
     console.log("2entra");
   }
 
