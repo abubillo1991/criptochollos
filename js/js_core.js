@@ -3,7 +3,6 @@ var WARTICLES_PER_PAGE = 5
 
 // <!-- *** Get query parameters -->
 let { c_id, q, s, o } = get_query_parameters();
-var _warticle_iterator = 1
 var _articles_displayed = 0
 var _articles_reviewed = 0
 
@@ -19,6 +18,11 @@ for (let _category of _categories) {
     add_ul_category_004(_category['id'], _category['name'], _category['url']);
 }
 
+for (i==0; i < WARTICLES_PER_PAGE; i++){
+    // <!-- *** 002 - Chollos widget -->
+    add_widget_card(_article[i]['id'], _article[i]['name'], _article[i]['category_id'], _article[i]['status'], _article[i]['image'], _article[i]['price']);
+}
+
 // 1. Filtrar por categoria o por query o por disponible
 // 2. Ordenar por fecha o por relevancia
 console.log(_articles);
@@ -29,12 +33,6 @@ var _articles_length = _articles.length;
 
 while(_articles_displayed < ARTICLES_PER_PAGE){
     _article=_articles[_articles_reviewed];
-    
-    if (_warticle_iterator <= WARTICLES_PER_PAGE) {
-        // <!-- *** 002 - Chollos widget -->
-        add_widget_card(_article['id'], _article['name'], _article['category_id'], _article['status'], _article['image'], _article['price']);
-        _warticle_iterator += 1;
-    }
 
     // <!-- *** 001 - Chollos -->
     add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
