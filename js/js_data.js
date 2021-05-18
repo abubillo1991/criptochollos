@@ -15,6 +15,7 @@ _articles = [
 _categories = [
     { id: 0, name: "Gratis", url: "#" },
     { id: 1, name: "Juegos", url: "#" },
-    { id: 2, name: "Oportunidades", url: "#" }
+    { id: 2, name: "Oportunidades", url: "#" },
+    { id: 3, name: "Droplets", url: "#" }
 ];
 
