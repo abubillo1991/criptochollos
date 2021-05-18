@@ -53,6 +53,7 @@ function add_ul_category_004(id, name, url) {
 }
 
 function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, ad) {
+  console.log(date+"/"+new Date(date))
   _article_card = '<div class="product-card product-card--hidden-actions ">';
 
   if (score > 4.5) { _article_card += '<div class="product-card__badges-list"><div class="product-card__badge product-card__badge--sale">HOT</div></div>'; }
