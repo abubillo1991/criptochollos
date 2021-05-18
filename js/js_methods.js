@@ -75,15 +75,15 @@ function add_widget_card(id, name, category_id, status, image, price) {
 }
 
 function update_search_filters(o,s){
-  s_options='<option selected value="1">Disponible</option><option value="0">Agotado</option>'
+  s_options='<option selected value="1">Disponible</option><option value="0">Agotado</option>';
   if(s != null && s==0){
-    s_options='<option selected value="0">Agotado</option><option value="1">Disponible</option>'
+    s_options='<option selected value="0">Agotado</option><option value="1">Disponible</option>';
   }
   document.getElementById("s").innerHTML += s_options;
 
-  o_options='<option selected value="date">Fecha de publicación</option><option value="score">Relevancia</option>'
+  o_options='<option selected value="date">Fecha de publicación</option><option value="score">Relevancia</option>';
   if(o != null && o=='score'){
-    s_options='<option value="date">Fecha de publicación</option><option selected value="score">Relevancia</option>'
+    s_options='<option value="date">Fecha de publicación</option><option selected value="score">Relevancia</option>';
   }
   document.getElementById("o").innerHTML += o_options;
 
