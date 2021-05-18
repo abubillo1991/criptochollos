@@ -21,8 +21,9 @@ for (let _category of _categories) {
 
 // 1. Filtrar por categoria o por query o por disponible
 // 2. Ordenar por fecha o por relevancia
+console.log(_articles);
 _articles = filter_and_order_articles(_articles, c_id, q, s, o)
-
+console.log(_articles);
 var _articles_length = _articles.length
 // 3. Mostrar
 

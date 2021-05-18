@@ -12,15 +12,15 @@ function get_query_parameters() {
 
 function filter_and_order_articles(_articles, c_id, q, s, o) {
   if (c_id != null) {
-    _articles = _articles.filter(x => x.category = c_id)
+    _articles = _articles.filter(x => x.category = c_id);
   }
 
   if (s != null) {
-    _articles = _articles.filter(x => x.status = s)
+    _articles = _articles.filter(x => x.status = s);
   }
 
   if (o != null && o == 'date') {
-    _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date))
+    _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date));
   }
 
   // TODO: falta la busqueda
