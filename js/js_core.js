@@ -36,11 +36,10 @@ while(_articles_displayed < ARTICLES_PER_PAGE){
         _warticle_iterator += 1;
     }
 
-    if (c_id == null || c_id == _article['category_id']) {
-        // <!-- *** 001 - Chollos -->
-        add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
-        _articles_displayed += 1;
-    }
+    // <!-- *** 001 - Chollos -->
+    add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
+    _articles_displayed += 1;
+
     _articles_reviewed += 1;
 }
 
@@ -56,11 +55,11 @@ window.onscroll = function () {
         while(_articles_displayed < ARTICLES_PER_PAGE && _articles_length > _articles_reviewed){
             console.log(_articles_length + '/' + _articles_reviewed);
             _article=_articles[_articles_reviewed];
-            if (c_id == null || c_id == _article['category_id']) {
-                // <!-- *** 001 - Chollos -->
-                add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
-                _articles_displayed += 1;
-            }
+
+            // <!-- *** 001 - Chollos -->
+            add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
+            _articles_displayed += 1;
+            
             _articles_reviewed += 1;
         }
     }
