@@ -22,6 +22,11 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
     console.log("3entra");
   }
 
+  if (q != null) {
+    _articles = _articles.filter(({ description }) => true == description.includes(q));
+    console.log("5entra");
+  }
+
   if (o != null && o == 'date') {
     _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date));
     console.log("4entra");
