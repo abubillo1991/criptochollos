@@ -81,4 +81,12 @@ function update_search_filters(o,s){
   }
   document.getElementById("s").innerHTML += s_options;
 
+  o_options='<option selected value="date">Fecha de publicación</option><option value="score">Relevancia</option>'
+  if(o != null && o=='score'){
+    s_options='<option value="date">Fecha de publicación</option><option selected value="score">Relevancia</option>'
+  }
+  document.getElementById("o").innerHTML += o_options;
+
+  
+
 }
