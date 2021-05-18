@@ -18,6 +18,7 @@ for (let _category of _categories) {
     add_ul_category_004(_category['id'], _category['name'], _category['url']);
 }
 
+// TODO: ordenar por score
 for (i==0; i < WARTICLES_PER_PAGE; i++){
     // <!-- *** 002 - Chollos widget -->
     add_widget_card(_article[i]['id'], _article[i]['name'], _article[i]['category_id'], _article[i]['status'], _article[i]['image'], _article[i]['price']);

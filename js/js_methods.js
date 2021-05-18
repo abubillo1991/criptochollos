@@ -23,9 +23,13 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
     _articles = _articles.filter(({ description }) => description.includes(q) == true);
   }
 
-  if (o != null && o == 'date') {
-    _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-    console.log("4entra");
+  if (o != null) {
+    if(o == 'date'){
+      _articles = _articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+    }else{
+      _articles = _articles.sort((a, b) => b.score - a.score);
+    }
+
   }
 
   // TODO: falta la busqueda
