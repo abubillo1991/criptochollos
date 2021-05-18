@@ -2,11 +2,11 @@ var ARTICLES_PER_PAGE = 5
 var WARTICLES_PER_PAGE = 5
 
 // <!-- *** Get query parameters -->
-let { c_id, q } = get_query_parameters();
+let { c_id, q, s, o } = get_query_parameters();
 var _warticle_iterator = 1
 var _articles_displayed = 0
 var _articles_reviewed = 0
-var _articles_length = _articles.length
+
 
 for (let _category of _categories) {
     // <!-- *** 001 - Categorias -->
@@ -21,6 +21,10 @@ for (let _category of _categories) {
 
 // 1. Filtrar por categoria o por query o por disponible
 // 2. Ordenar por fecha o por relevancia
+_articles = filter_and_order_articles(_articles, c_id, q, s, o)
+
+var _articles_length = _articles.length
+// 3. Mostrar
 
 while(_articles_displayed < ARTICLES_PER_PAGE){
     _article=_articles[_articles_reviewed]

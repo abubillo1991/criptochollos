@@ -1,11 +1,30 @@
 function get_query_parameters(){
+  // TODO: asegurar que los query parameters son validos, no hay demas, son numeros...
   var url_string = window.location.href
   var url = new URL(url_string);
   var q = url.searchParams.get("q");
   var c_id = url.searchParams.get("c_id");
-  var page = url.searchParams.get("page");
+  var s = url.searchParams.get("s");
+  var o = url.searchParams.get("o");
 
-  return {c_id , q, page};
+  return {c_id , q, s, o};
+}
+
+function filter_and_order_articles(_articles, c_id , q, s, o){
+  if (c_id != null){
+    _articles =_articles.filter(x=> x.category=c_id)
+  }
+
+  if (s != null){
+    _articles =_articles.filter(x=> x.status=s)
+  }
+
+  if (o != null && o=='date'){
+    _articles =_articles.sort((a,b) => new Date(b.date)-new Date(a.date))
+  }
+  
+  // TODO: falta la busqueda
+  return _articles
 }
 
 function add_nav_category_001(id, name, url) {
