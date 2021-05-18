@@ -23,7 +23,7 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
   }
 
   if (q != null) {
-    console.log(_articles[0]['description'].includes("Wisi"))
+    console.log(_articles[0]['description'].includes("Wisi"));
     _articles = _articles.filter(({ description }) => description.includes(q) == true);
     console.log("5entra");
   }
