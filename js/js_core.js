@@ -1,11 +1,11 @@
-var ARTICLES_PER_PAGE = 5
-var WARTICLES_PER_PAGE = 5
+var ARTICLES_PER_PAGE = 5;
+var WARTICLES_PER_PAGE = 5;
 
 // <!-- *** Get query parameters -->
 let { c_id, q, s, o } = get_query_parameters();
-var _articles_displayed = 0
-var _articles_reviewed = 0
-
+var _articles_displayed = 0;
+var _articles_reviewed = 0;
+var i;
 
 for (let _category of _categories) {
     // <!-- *** 001 - Categorias -->
@@ -19,7 +19,7 @@ for (let _category of _categories) {
 }
 
 // TODO: ordenar por score
-for (i==0; i < WARTICLES_PER_PAGE; i++){
+for (i=0; i < WARTICLES_PER_PAGE; i++){
     // <!-- *** 002 - Chollos widget -->
     add_widget_card(_article[i]['id'], _article[i]['name'], _article[i]['category_id'], _article[i]['status'], _article[i]['image'], _article[i]['price']);
 }
