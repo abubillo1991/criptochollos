@@ -19,9 +19,9 @@ for (let _category of _categories) {
 }
 
 // TODO: ordenar por score
-for (i=0; i < WARTICLES_PER_PAGE; i++){
+for (i = 0; i < WARTICLES_PER_PAGE; i++) {
     // <!-- *** 002 - Chollos widget -->
-    add_widget_card(_article[i]['id'], _article[i]['name'], _article[i]['category_id'], _article[i]['status'], _article[i]['image'], _article[i]['price']);
+    add_widget_card(_articles[i]['id'], _articles[i]['name'], _articles[i]['category_id'], _articles[i]['status'], _articles[i]['image'], _articles[i]['price']);
 }
 
 // 1. Filtrar por categoria o por query o por disponible
@@ -32,8 +32,8 @@ console.log(_articles);
 var _articles_length = _articles.length;
 // 3. Mostrar
 
-while(_articles_displayed < ARTICLES_PER_PAGE){
-    _article=_articles[_articles_reviewed];
+while (_articles_displayed < ARTICLES_PER_PAGE) {
+    _article = _articles[_articles_reviewed];
 
     // <!-- *** 001 - Chollos -->
     add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
@@ -51,9 +51,9 @@ window.onscroll = function () {
 
     if (totalHeight >= scrollHeight) {
         console.log('bottom')
-        while(_articles_displayed < ARTICLES_PER_PAGE && _articles_length > _articles_reviewed){
+        while (_articles_displayed < ARTICLES_PER_PAGE && _articles_length > _articles_reviewed) {
             console.log(_articles_length + '/' + _articles_reviewed);
-            _article=_articles[_articles_reviewed];
+            _article = _articles[_articles_reviewed];
 
             // <!-- *** 001 - Chollos -->
             add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price']);
