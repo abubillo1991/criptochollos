@@ -13,15 +13,15 @@ function get_query_parameters() {
 function filter_and_order_articles(_articles, c_id, q, s, o) {
   console.log("1entra");
   if (c_id != null) {
-    _articles = _articles.filter(x => x.category_id = c_id);
+    _articles = _articles.filter(({ category_id }) => category_id == c_id);
     console.log("2entra");
   }
 
   if (s != null) {
     if(s == 1){
-      _articles = _articles.filter(x => x.status = 1);
+      _articles = _articles.filter(x => x.status == 1);
     } else if(s == 0) {
-      _articles = _articles.filter(x => x.status = 0);
+      _articles = _articles.filter(x => x.status == 0);
     }
     
     console.log("3entra");
