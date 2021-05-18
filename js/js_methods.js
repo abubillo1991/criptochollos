@@ -18,7 +18,7 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
   }
 
   if (s != null) {
-    _articles = _articles.filter(({ status }) => status == c_id);
+    _articles = _articles.filter(({ status }) => status == s);
     console.log("3entra");
   }
 
