@@ -56,7 +56,7 @@ function add_div_category_005(id, name, url) {
   document.getElementById("div_categories_005").innerHTML += '<li class="mobile-links__item" data-collapse-item><div class="mobile-links__item-title"><a href="index.html?c_id=' + id + '" class="mobile-links__item-link">'+name+'</a></div></li>';
 }
 
-function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, url) {
+function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, url, user) {
   console.log(date+"/"+new Date(date))
   _article_card = '<div class="products-list__item"><div class="product-card product-card--hidden-actions ">';
 
@@ -70,7 +70,9 @@ function add_article_card(id, name, category_id, intro_description, date, score,
   }
   _article_card += '</div></div></div><div class="product-card__rating-legend">' + score + '</div></div><p class="product-card__features-list">' + intro_description + '</p></div><div class="product-card__actions"><div class="product-card__availability">Estado: ';
   if (status == 1) { _article_card += '<span class="text-success">Disponible'; } else { _article_card += '<span class="text-danger">Agotado'; }
-  _article_card += '</span></div><div class="product-card__prices">' + price + '</div><div class="product-card__buttons"><a class="btn btn-success product-card__addtocart product-card__addtocart--list" type="button" target="_blank" href="oferta.html?id=' + id + '&url=' + url + '">Ir al chollo</a></div></div></div></div>';
+  _article_card += '</span></div><div class="product-card__prices">' + price + '</div><div class="product-card__buttons"><a class="btn btn-success product-card__addtocart product-card__addtocart--list" type="button" target="_blank" href="oferta.html?id=' + id + '&url=' + url + '">Ir al chollo</a></div>';
+  
+  _article_card += '<div class="product-card__availability">Usuario: <span class="text-success">' + user + '</span></div></div></div></div>';
   document.getElementById("_article_card_list").innerHTML += _article_card
 }
 
