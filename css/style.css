@@ -4269,6 +4269,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 }
 
 .share-links__item--type--tweet a:hover {
+  background: #439c1d;
+}
+
+.share-links__item--type--wapp a {
+  background: #4aae20;
+}
+
+.share-links__item--type--wapp a:hover {
   background: #1886c9;
 }
 
