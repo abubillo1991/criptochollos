@@ -10,7 +10,7 @@ var i;
 if (o_id == null) {
     window.location.replace("index.html");
 }
-_article=get_article_by_id(id);
+_article=get_article_by_id(o_id);
 change_site_title(_article['name']);
 console.log(_article)
 
