@@ -11,8 +11,13 @@ if (o_id == null) {
     window.location.replace("index.html");
 }
 _article=get_article_by_id(o_id);
+
 change_site_title(_article['name']+' - criptochollos.com');
-console.log(_article)
+
+change_breadcrumb(_article['name']);
+
+//update_offer(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price'], _article['url'], _article['user'])
+
 
 /*
 update_search_filters(o,s);

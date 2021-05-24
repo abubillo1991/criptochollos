@@ -106,3 +106,7 @@ function update_search_filters(o,s){
 function get_article_by_id(id){
   return _articles[id];
 }
+
+function change_breadcrumb(name){
+  document.getElementById("breadcrumb-current-offer").innerHTML += name;
+}
