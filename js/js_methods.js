@@ -37,8 +37,6 @@ function filter_and_order_articles(_articles, c_id, q, s, o) {
     }
 
   }
-
-  // TODO: falta la busqueda
   return _articles
 }
 
@@ -90,6 +88,7 @@ function add_widget_card(id, name, category_id, status, image, price, url) {
   document.getElementById("_widget_card_list").innerHTML += _article_card;
 }
 
+/*
 function update_search_filters(o,s){
   s_options='<option selected value="1">Disponible</option><option value="0">Agotado</option>';
   if(s != null && s==0){
@@ -102,7 +101,7 @@ function update_search_filters(o,s){
     s_options='<option value="date">Fecha de publicación</option><option selected value="score">Relevancia</option>';
   }
   document.getElementById("o").innerHTML += o_options;
-}
+}*/
 
 function get_article_by_id(id){
   return _articles[id];
