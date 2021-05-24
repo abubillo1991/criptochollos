@@ -16,7 +16,7 @@ change_site_title(_article['name']+' - criptochollos.com');
 
 change_breadcrumb(get_category_name_by_id(_article['category_id']),_article['category_id'], _article['name']);
 
-update_offer(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price'], _article['url'], _article['user'])
+update_offer(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price'], _article['url'], _article['user'], _article['description'])
 
 
 /*
