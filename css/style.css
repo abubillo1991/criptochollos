@@ -3271,7 +3271,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 .product-card__user {
   margin-top: 14px;
   line-height: 1;
-  color: #3d464d;
+  color: #999;
+  font-size: 14px;
 }
 
 .product-card__new-price {
