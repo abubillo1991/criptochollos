@@ -133,6 +133,6 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
 
 
   document.getElementById("offer-footer").innerHTML += '<div class="product__tags tags"><div class="tags__list"><a href="index.html?c_id='+c_id+'">'+c_name+'</a></div></div>';
-  document.getElementById("offer-footer").innerHTML += '<div class="product__share-links share-links"><ul class="share-links__list"><li class="share-links__item share-links__item--type--like"><div class="fb-share-button" data-href="https://www.criptochollos.com" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.criptochollos.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li><li class="share-links__item share-links__item--type--tweet"><a href="https://twitter.com/share?url=https://www.criptochollos.com/">Tweet</a></li></ul></div>';
+  document.getElementById("offer-footer").innerHTML += '<div class="product__share-links share-links"><ul class="share-links__list"><li class="share-links__item share-links__item--type--like"><a href="https://twitter.com/share?url=https://www.criptochollos.com/">Comparte</a></li><li class="share-links__item share-links__item--type--tweet"><a href="https://twitter.com/share?url=https://www.criptochollos.com/">Comparte</a></li></ul></div>';
 
 }
