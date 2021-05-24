@@ -126,12 +126,13 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
   }
   _offer_info +='</div></div></div><div class="product__rating-legend"><a>'+o_score+'</a><span></div></div><div class="product__description">'+o_intro_description+'</div><ul class="product__meta"><li class="product__meta-availability">Estado: ';
   if (o_status == 1) { _offer_info += '<span class="text-success">Disponible</span></li>'; } else { _offer_info += '<span class="text-danger">Agotado</span></li>'; }
-  _offer_info += '<li>Usuario: <a class="text-dark">'+o_user+'</a></li></ul>'
-  document.getElementById("offer-info").innerHTML +=_offer_info
+  _offer_info += '<li>Usuario: <a class="text-dark">'+o_user+'</a></li></ul>';
+  document.getElementById("offer-info").innerHTML +=_offer_info;
 
   document.getElementById("offer-sidebar").innerHTML += '<div class="product__prices">'+o_price+'</div><form class="product__options"><div class="form-group product__option"><div class="product__actions"><div class="product__actions-item product__actions-item--addtocart"><div class="d-grid gap-2"><a href="'+o_ref+'" target="_blank" class="btn btn-success btn-lg text-white">Ir al chollo</a></div></div></div></div></form>'
 
 
   document.getElementById("offer-footer").innerHTML += '<div class="product__tags tags"><div class="tags__list"><a href="index.html?c_id='+c_id+'">'+c_name+'</a></div></div>';
-  document.getElementById("offer-footer").innerHTML += '<div class="product__share-links share-links"><ul class="share-links__list"><li class="share-links__item share-links__item--type--like"><div class="fb-share-button" data-href="https://www.criptochollos.com/oferta.html?o_id=0&amp;u=alien-worlds-2021" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.criptochollos.com%2Foferta.html%3Fo_id%3D0%26u%3Dalien-worlds-2021&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li><li class="share-links__item share-links__item--type--tweet"><a href="">Tweet</a></li><li class="share-links__item share-links__item--type--counter"><a href="">4K</a></li></ul></div>''
+  document.getElementById("offer-footer").innerHTML += '<div class="product__share-links share-links"><ul class="share-links__list"><li class="share-links__item share-links__item--type--like"><div class="fb-share-button" data-href="https://www.criptochollos.com/oferta.html?o_id=0&amp;u=alien-worlds-2021" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.criptochollos.com%2Foferta.html%3Fo_id%3D0%26u%3Dalien-worlds-2021&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li><li class="share-links__item share-links__item--type--tweet"><a href="">Tweet</a></li><li class="share-links__item share-links__item--type--counter"><a href="">4K</a></li></ul></div>';
+
 }
