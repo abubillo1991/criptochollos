@@ -112,7 +112,7 @@ function change_breadcrumb(c_name, c_id, o_name){
 }
 
 function get_category_name_by_id(o_id){
-  return _categories[o_id];
+  return _categories[o_id]['name'];
 }
 
 function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_status,o_image,o_price,o_url,o_user){
