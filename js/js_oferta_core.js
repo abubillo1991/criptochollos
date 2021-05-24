@@ -23,6 +23,13 @@ for (let _category of _categories) {
     add_ul_category_004(_category['id'], _category['name'], _category['url']);
 }
 
+_warticles = filter_and_order_articles(_articles, c_id, q, 1, 'score');
+// TODO: ordenar por score
+for (i = 0; i < WARTICLES_PER_PAGE; i++) {
+    // <!-- *** 002 - Chollos widget -->
+    add_widget_card(_warticles[i]['id'], _warticles[i]['name'], _warticles[i]['category_id'], _warticles[i]['status'], _warticles[i]['image'], _warticles[i]['price'], _warticles[i]['url']);
+}
+
 /*
 update_search_filters(o,s);
 
@@ -39,12 +46,7 @@ for (let _category of _categories) {
     add_div_category_005(_category['id'], _category['name'], _category['url']);
 }
 
-_warticles = filter_and_order_articles(_articles, c_id, q, 1, 'score');
-// TODO: ordenar por score
-for (i = 0; i < WARTICLES_PER_PAGE; i++) {
-    // <!-- *** 002 - Chollos widget -->
-    add_widget_card(_warticles[i]['id'], _warticles[i]['name'], _warticles[i]['category_id'], _warticles[i]['status'], _warticles[i]['image'], _warticles[i]['price'], _warticles[i]['url']);
-}
+
 
 // 1. Filtrar por categoria o por query o por disponible
 // 2. Ordenar por fecha o por relevancia
