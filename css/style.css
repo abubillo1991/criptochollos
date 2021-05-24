@@ -12551,7 +12551,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
     width: calc(100% - 285px);
   }
   [dir=ltr] .shop-layout--sidebar--start .shop-layout__sidebar {
-    margin-right: 30px;
+    margin-left: 30px;
   }
   [dir=rtl] .shop-layout--sidebar--start .shop-layout__sidebar {
     margin-left: 30px;
