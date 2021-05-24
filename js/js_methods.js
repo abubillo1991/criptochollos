@@ -116,5 +116,5 @@ function get_category_name_by_id(o_id){
 }
 
 function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_status,o_image,o_price,o_url,o_user){
-
+  document.getElementById("offer-image").innerHTML += '<a href="'+o_image+'" data-width="700" data-height="700" class="product-image__body" target="_blank"><img class="product-image__img" src="'+o_image+'" alt=""></a>'
 }
