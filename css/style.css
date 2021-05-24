@@ -10815,7 +10815,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 }
 
 [dir=ltr] .product__share-links {
-  margin-left: 24px;
+  margin-left: 0;
   margin-right: 0;
 }
 
