@@ -2,7 +2,7 @@ var ARTICLES_PER_PAGE = 5;
 var WARTICLES_PER_PAGE = 5;
 
 // <!-- *** Get query parameters -->
-let { c_id, q, s, o } = get_query_parameters();
+let { c_id, q, s, o, u } = get_query_parameters();
 var _articles_displayed = 0;
 var _articles_reviewed = 0;
 var i;
