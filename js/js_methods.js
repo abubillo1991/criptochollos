@@ -72,7 +72,7 @@ function add_article_card(id, name, category_id, intro_description, date, score,
   if (status == 1) { _article_card += '<span class="text-success">Disponible'; } else { _article_card += '<span class="text-danger">Agotado'; }
   _article_card += '</span></div><div class="product-card__prices">' + price + '</div><div class="product-card__buttons"><a class="btn btn-success product-card__addtocart product-card__addtocart--list" type="button" target="_blank" href="oferta.html?id=' + id + '&url=' + url + '">Ir al chollo</a></div>';
   
-  _article_card += '<div class="product-card__availability">Usuario: <span class="text-success">' + user + '</span></div></div></div></div>';
+  _article_card += '<div class="product-card__user">Usuario: <span class="text-success">' + user + '</span></div></div></div></div>';
   document.getElementById("_article_card_list").innerHTML += _article_card
 }
 
