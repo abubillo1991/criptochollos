@@ -61,7 +61,7 @@ function add_article_card(id, name, category_id, intro_description, date, score,
   _article_card = '<div class="product-card product-card--hidden-actions ">';
 
   if (score > 4.5) { _article_card += '<div class="product-card__badges-list"><div class="product-card__badge product-card__badge--sale">HOT</div></div>'; }
-  else if (((new Date) - new Date(date)) <  (60 * 60 * 1000)){ _article_card += '<div class="product-card__badges-list"><div class="product-card__badge product-card__badge--new">NUEVO</div></div>'; }
+  else if (((new Date) - new Date(date)) <  (60 * 60 * 1000 * 24)){ _article_card += '<div class="product-card__badges-list"><div class="product-card__badge product-card__badge--new">NUEVO</div></div>'; }
 
   _article_card += '<div class="product-card__image product-image"><a target="_blank" href="oferta.html?id=' + id + '" class="product-image__body"><img class="product-image__img" src="' + image + '" alt=""></a></div><div class="product-card__info"><div class="product-card__name"><a target="_blank" href="oferta.html?id=' + id + '">' + name + '</a></div><div class="product-card__rating"><div class="product-card__rating-stars"><div class="rating"><div class="rating__body">';
   for (i = 1; i <= 5; i++) {
@@ -75,8 +75,11 @@ function add_article_card(id, name, category_id, intro_description, date, score,
 }
 
 function add_widget_card(id, name, category_id, status, image, price) {
-  _article_card = '<div class="widget-products__item"><div class="widget-products__image"><div class="product-image"><a target="_blank" href="oferta.html?id=' + id + '" class="product-image__body"><img class="product-image__img" src="' + image + '" alt=""></a></div></div><div class="widget-products__info"><div class="widget-products__name"><a target="_blank" href="oferta.html?id=' + id + '">' + name + '</a></div><div class="widget-products__prices">' + price + '</div></div></div>'
-  document.getElementById("_widget_card_list").innerHTML += _article_card
+  _article_card = '<div class="widget-products__item"><div class="widget-products__image"><div class="product-image"><a target="_blank" href="oferta.html?id=' + id + '" class="product-image__body"><img class="product-image__img" src="' + image + '" alt=""></a></div></div><div class="widget-products__info"><div class="widget-products__name"><a target="_blank" href="oferta.html?id=' + id + '">';
+  if (name.length > 50) {_article_card += name.substring(0, 50) + '...';}
+  else {_article_card += name; }
+  _article_card += '</a></div><div class="widget-products__prices">' + price + '</div></div></div>';
+  document.getElementById("_widget_card_list").innerHTML += _article_card;
 }
 
 function update_search_filters(o,s){
