@@ -115,7 +115,7 @@ function get_category_name_by_id(o_id){
   return _categories[o_id]['name'];
 }
 
-function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_status,o_image,o_price,o_url,o_user, o_description, o_ref){
+function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_status,o_image,o_price,o_url,o_user, o_description, o_ref, c_name){
   document.getElementById("offer-image").innerHTML += '<a href="'+o_image+'" data-width="700" data-height="700" class="product-image__body" target="_blank"><img class="product-image__img" src="'+o_image+'" alt=""></a>';
   document.getElementById("offer-description").innerHTML += o_description;
 
@@ -131,4 +131,7 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
 
   document.getElementById("offer-sidebar").innerHTML += '<div class="product__prices">'+o_price+'</div><form class="product__options"><div class="form-group product__option"><div class="product__actions"><div class="product__actions-item product__actions-item--addtocart"><div class="d-grid gap-2"><a href="'+o_ref+'" target="_blank" class="btn btn-success btn-lg text-white">Ir al chollo</a></div></div></div></div></form>'
 
+
+  document.getElementById("offer-footer").innerHTML += '<div class="product__tags tags"><div class="tags__list"><a href="index.html?c_id='+c_id+'">'+c_name+'</a></div></div>';
+  document.getElementById("offer-footer").innerHTML += '<div class="product__share-links share-links"><ul class="share-links__list"><li class="share-links__item share-links__item--type--like"><div class="fb-share-button" data-href="https://www.criptochollos.com/oferta.html?o_id=0&amp;u=alien-worlds-2021" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.criptochollos.com%2Foferta.html%3Fo_id%3D0%26u%3Dalien-worlds-2021&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div></li><li class="share-links__item share-links__item--type--tweet"><a href="">Tweet</a></li><li class="share-links__item share-links__item--type--counter"><a href="">4K</a></li></ul></div>''
 }
