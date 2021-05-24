@@ -6880,7 +6880,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 .mobilemenu__content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1;
+          /*flex-grow: 1;*/
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
