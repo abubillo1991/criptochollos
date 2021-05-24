@@ -60,7 +60,7 @@ function add_div_category_005(id, name, url) {
   document.getElementById("div_categories_005").innerHTML += '<li class="mobile-links__item" data-collapse-item><div class="mobile-links__item-title"><a href="index.html?c_id=' + id + '" class="mobile-links__item-link">'+name+'</a></div></li>';
 }
 
-function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, url, user) {
+function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, url, user, ref) {
   console.log(date+"/"+new Date(date))
   _article_card = '<div class="products-list__item"><div class="product-card product-card--hidden-actions ">';
 
@@ -74,7 +74,7 @@ function add_article_card(id, name, category_id, intro_description, date, score,
   }
   _article_card += '</div></div></div><div class="product-card__rating-legend">' + score + '</div></div><p class="product-card__features-list">' + intro_description + '</p></div><div class="product-card__actions"><div class="product-card__availability">Estado: ';
   if (status == 1) { _article_card += '<span class="text-success">Disponible'; } else { _article_card += '<span class="text-danger">Agotado'; }
-  _article_card += '</span></div><div class="product-card__prices">' + price + '</div><div class="product-card__buttons"><a class="btn btn-success product-card__addtocart product-card__addtocart--list" type="button" target="_blank" href="oferta.html?o_id=' + id + '&u=' + url + '">Ir al chollo</a></div>';
+  _article_card += '</span></div><div class="product-card__prices">' + price + '</div><div class="product-card__buttons"><a class="btn btn-success product-card__addtocart product-card__addtocart--list" type="button" target="_blank" href="' + ref + '">Ir al chollo</a></div>';
   
   _article_card += '<div class="product-card__user">Usuario: <span class="text-dark">' + user + '</span></div></div></div></div>';
   document.getElementById("_article_card_list").innerHTML += _article_card
@@ -115,7 +115,7 @@ function get_category_name_by_id(o_id){
   return _categories[o_id]['name'];
 }
 
-function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_status,o_image,o_price,o_url,o_user, o_description){
+function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_status,o_image,o_price,o_url,o_user, o_description, o_ref){
   document.getElementById("offer-image").innerHTML += '<a href="'+o_image+'" data-width="700" data-height="700" class="product-image__body" target="_blank"><img class="product-image__img" src="'+o_image+'" alt=""></a>';
   document.getElementById("offer-description").innerHTML += o_description;
 
@@ -124,11 +124,11 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
     if (i <= o_score) { _offer_info += '<svg class="rating__star rating__star--active" width="13px" height="12px"><g class="rating__fill"><use xlink:href="images/sprite.svg#star-normal"></use></g><g class="rating__stroke"><use xlink:href="images/sprite.svg#star-normal-stroke"></use></g></svg><div class="rating__star rating__star--only-edge rating__star--active"><div class="rating__fill"><div class="fake-svg-icon"></div></div><div class="rating__stroke"><div class="fake-svg-icon"></div></div></div>'; }
     else { _offer_info += '<svg class="rating__star " width="13px" height="12px"><g class="rating__fill"><use xlink:href="images/sprite.svg#star-normal"></use></g><g class="rating__stroke"><use xlink:href="images/sprite.svg#star-normal-stroke"></use></g></svg><div class="rating__star rating__star--only-edge "><div class="rating__fill"><div class="fake-svg-icon"></div></div><div class="rating__stroke"><div class="fake-svg-icon"></div></div></div>'; }
   }
-  
   _offer_info +='</div></div></div><div class="product__rating-legend"><a>'+o_score+'</a><span></div></div><div class="product__description">'+o_intro_description+'</div><ul class="product__meta"><li class="product__meta-availability">Estado: ';
   if (o_status == 1) { _offer_info += '<span class="text-success">Disponible</span></li>'; } else { _offer_info += '<span class="text-danger">Agotado</span></li>'; }
-                                                  
-  _offer_info += '<li>Usuario: <a >'+o_user+'</a></li></ul>'
+  _offer_info += '<li>Usuario: <a class="text-dark">'+o_user+'</a></li></ul>'
+  document.getElementById("offer-info").innerHTML +=_offer_info
 
-document.getElementById("offer-info").innerHTML +=_offer_info
+  document.getElementById("offer-sidebar").innerHTML += '<div class="product__prices">'+o_price+'</div><form class="product__options"><div class="form-group product__option"><div class="product__actions"><div class="product__actions-item product__actions-item--addtocart"><div class="d-grid gap-2"><a href="'+o_ref+'" target="_blank" class="btn btn-success btn-lg text-white">Ir al chollo</a></div></div></div></div></form>'
+
 }

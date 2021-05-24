@@ -39,7 +39,7 @@ while (_articles_displayed < ARTICLES_PER_PAGE) {
     _article = _articles[_articles_reviewed];
 
     // <!-- *** 001 - Chollos -->
-    add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price'], _article['url'], _article['user']);
+    add_article_card(_article['id'], _article['name'], _article['category_id'], _article['intro_description'], _article['date'], _article['score'], _article['status'], _article['image'], _article['price'], _article['url'], _article['user'], _article['ref']);
     _articles_displayed += 1;
 
     _articles_reviewed += 1;
