@@ -108,7 +108,7 @@ function get_article_by_id(id){
 }
 
 function change_breadcrumb(c_name, c_id, o_name){
-  document.getElementById("breadcrumb-current-offer").innerHTML += '<li class="breadcrumb-item"><a href="href="index.html?c_id='+c_id+'">'+c_name+'</a> <svg class="breadcrumb-arrow" width="6px" height="9px"><use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use></svg></li> <li class="breadcrumb-item active" aria-current="page">'+o_name+'</li>';
+  document.getElementById("breadcrumb-current-offer").innerHTML += '<li class="breadcrumb-item"><a href="index.html?c_id='+c_id+'">'+c_name+'</a> <svg class="breadcrumb-arrow" width="6px" height="9px"><use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use></svg></li> <li class="breadcrumb-item active" aria-current="page">'+o_name+'</li>';
 }
 
 function get_category_name_by_id(o_id){
