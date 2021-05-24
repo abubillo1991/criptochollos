@@ -53,7 +53,7 @@ function add_ul_category_004(id, name, url) {
 }
 
 function add_div_category_005(id, name, url) {
-  document.getElementById("div_categories_005").innerHTML += '<a href="index.html?c_id=' + id + '" class="mobile-links__item-link">'+name+'</a>';
+  document.getElementById("div_categories_005").innerHTML += '<li class="mobile-links__item" data-collapse-item><div class="mobile-links__item-title"><a href="index.html?c_id=' + id + '" class="mobile-links__item-link">'+name+'</a></div></li>';
 }
 
 function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, ad) {
