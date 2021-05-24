@@ -12755,6 +12755,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
 }
 
 @media (max-width: 474px) {
+  #filter-btn{
+    margin-top: 10px;
+  }
+  
   .view-options__legend {
     width: 100%;
     padding-top: 12px;
