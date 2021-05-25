@@ -10,7 +10,7 @@ for (let _category of _categories) {
 }
 
 function contact_form() {
-    alert('clicked');
+    alert(document.getElementById("form-message").innerHTML);
     
     // contact(c_message)
   }
