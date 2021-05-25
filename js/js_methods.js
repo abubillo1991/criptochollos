@@ -139,6 +139,7 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
 function contact(c_message){
   var myHeaders = new Headers();
   myHeaders.append("Access-Control-Allow-Origin", "*");
+  myHeaders.append("Content-Type", "application/json");
 
   var requestOptions = {
     method: 'GET',
