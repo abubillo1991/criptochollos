@@ -146,7 +146,7 @@ function contact(c_message){
     }
   });
   
-  xhr.open("GET", "https://5mus0rdlc0.execute-api.eu-west-3.amazonaws.com/default/criptochollos_contact?id=200");
+  xhr.open("GET", "https://5mus0rdlc0.execute-api.eu-west-3.amazonaws.com/default/criptochollos_contact?"+c_message);
   
   r_contact=xhr.send();
 
