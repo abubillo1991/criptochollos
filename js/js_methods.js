@@ -143,9 +143,9 @@ function contact(c_message){
   };
   
   r_contact=fetch("https://5mus0rdlc0.execute-api.eu-west-3.amazonaws.com/default/criptochollos_contact?"+c_message, requestOptions)
-    .then(response => response.text())
+    /*.then(response => response.text())
     .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+    .catch(error => console.log('error', error));*/
 
-  return r_contact
+  return r_contact.json()
 }
