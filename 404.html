@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Contacto - Criptochollos.com</title>
+    <link rel="icon" type="image/png" href="images/favicon-blue.png">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
+    <!-- css -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="vendor/photoswipe/default-skin/default-skin.css">
+    <link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font - fontawesome -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <!-- font - stroyka -->
+    <link rel="stylesheet" href="fonts/stroyka/stroyka.css">
+</head>
+
+<body>
+    <!-- site -->
+    <div class="site">
+        <!-- mobile site__header -->
+        <header class="site__header d-lg-none">
+            <!-- data-sticky-mode - one of [pullToShow, alwaysOnTop] -->
+            <div class="mobile-header mobile-header--sticky" data-sticky-mode="pullToShow">
+                <div class="mobile-header__panel">
+                    <div class="container">
+                        <div class="mobile-header__body">
+                            <button class="mobile-header__menu-button">
+                                <svg width="18px" height="14px">
+                                    <use xlink:href="images/sprite.svg#menu-18x14"></use>
+                                </svg>
+                            </button>
+                            <a class="mobile-header__logo" href="index.html">
+                                <!-- mobile-logo -->
+                                <img src="images/logo-criptochollos-with-icon.png" alt="criptochollos.com logo" style="height: 20px;"> 
+                                <!-- mobile-logo / end -->
+                            </a>
+                            <div class="search search--location--mobile-header mobile-header__search">
+                                <div class="search__body">
+                                    <form class="search__form" action="">
+                                        <input class="search__input" name="q" placeholder="Busca chollos, ofertas y descuentos en criptomonedas" aria-label="Site search" type="text" autocomplete="off">
+                                        <button class="search__button search__button--type--submit" type="submit">
+                                            <svg width="20px" height="20px">
+                                                <use xlink:href="images/sprite.svg#search-20"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="search__button search__button--type--close" type="button">
+                                            <svg width="20px" height="20px">
+                                                <use xlink:href="images/sprite.svg#cross-20"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="search__border"></div>
+                                    </form>
+                                    <div class="search__suggestions suggestions suggestions--location--mobile-header"></div>
+                                </div>
+                            </div>
+                            <div class="mobile-header__indicators">
+                                <div class="indicator indicator--mobile-search indicator--mobile d-md-none">
+                                    <button class="indicator__button">
+                                        <span class="indicator__area">
+                                            <svg width="20px" height="20px">
+                                                <use xlink:href="images/sprite.svg#search-20"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="indicator indicator--mobile d-sm-flex d-none">
+                                    <a href="wishlist.html" class="indicator__button">
+                                        <span class="indicator__area">
+                                            <svg width="20px" height="20px">
+                                                <use xlink:href="images/sprite.svg#heart-20"></use>
+                                            </svg>
+                                            <span class="indicator__value">0</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mobile site__header / end -->
+        <!-- desktop site__header -->
+        <header class="site__header d-lg-block d-none">
+            <div class="site-header">
+                <div class="site-header__middle container">
+                    <div class="site-header__logo">
+                        <a href="index.html">
+                            <!-- logo -->
+                            <img src="images/logo-criptochollos-with-icon.png" alt="criptochollos.com logo" style="height: 23px;"> 
+                            <!-- logo / end -->
+                        </a>
+                    </div>
+                    <div class="site-header__search">
+                        <div class="search search--location--header ">
+                            <div class="search__body">
+                                <form class="search__form" action="">
+                                    <select class="search__categories" aria-label="Category" id="select_categories_002">
+                                        <!-- *** 002 - Categorias -->
+                                        <option value="all">Todas las categorias</option>
+                                    </select>
+                                    <input class="search__input" name="q" placeholder="Busca chollos, ofertas y descuentos en criptomonedas" aria-label="Site search" type="text" autocomplete="off">
+                                    <button class="search__button search__button--type--submit" type="submit">
+                                        <svg width="20px" height="20px">
+                                            <use xlink:href="images/sprite.svg#search-20"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="search__border"></div>
+                                </form>
+                                <div class="search__suggestions suggestions suggestions--location--header"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="site-header__phone">
+                        <a href="publicar-chollo.html" class="btn btn-secondary"><i class="fa fa-plus" aria-hidden="true"></i> Publicar chollo</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- desktop site__header / end -->
+        <!-- site__body -->
+        <div class="site__body">
+            <div class="block">
+                <div class="container">
+                    <div class="not-found">
+                        <div class="not-found__404">Oops! Error 404</div>
+                        <div class="not-found__content">
+                            <h1 class="not-found__title">Página no encontrada</h1>
+                            <p class="not-found__text">Parece que no podemos encontrar la página que está buscando.</p>
+                            <a class="btn btn-secondary btn-sm" href="index.html">Ir al Inicio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- site__body / end -->
+    </div>
+    <!-- site / end -->
+    <!-- quickview-modal -->
+    <div id="quickview-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+    <!-- quickview-modal / end -->
+    <!-- mobilemenu -->
+    <div class="mobilemenu">
+        <div class="mobilemenu__backdrop"></div>
+        <div class="mobilemenu__body">
+            <div class="mobilemenu__header">
+                <div class="mobilemenu__title">Categorias</div>
+                <button type="button" class="mobilemenu__close">
+                    <svg width="20px" height="20px">
+                        <use xlink:href="images/sprite.svg#cross-20"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobilemenu__content">
+                <ul class="mobile-links mobile-links--level--0" data-collapse data-collapse-opened-class="mobile-links__item--open" id="div_categories_005">
+                    <!-- *** 005 - Categorias -->
+                </ul>
+            </div>
+            <div class="mobilemenu__header">
+                <div class="mobilemenu__title">Otros</div>
+            </div>
+            <div class="mobilemenu__content">
+                <ul class="mobile-links mobile-links--level--0" data-collapse data-collapse-opened-class="mobile-links__item--open">
+                    <li class="mobile-links__item" data-collapse-item><div class="mobile-links__item-title"><a href="publicar-chollo.html" class="mobile-links__item-link">Publicar chollo</a></div></li>
+                    <li class="mobile-links__item" data-collapse-item><div class="mobile-links__item-title"><a href="contacto.html" class="mobile-links__item-link">Contacto</a></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- mobilemenu / end -->
+    <!-- photoswipe -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <!--<button class="pswp__button pswp__button&#45;&#45;share" title="Share"></button>-->
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- photoswipe / end -->
+    <!-- js -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/photoswipe/photoswipe.min.js"></script>
+    <script src="vendor/photoswipe/photoswipe-ui-default.min.js"></script>
+    <script src="vendor/select2/js/select2.min.js"></script>
+    <script src="js/number.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="vendor/svg4everybody/svg4everybody.min.js"></script>
+    <script>
+        svg4everybody();
+    </script>
+    <script src="js/js_methods.js" type="text/javascript"></script>
+    <script src="js/js_data.js" type="text/javascript"></script>
+    <script src="js/js_contacto_core.js" type="text/javascript"></script>
+</body>
+
+</html>
