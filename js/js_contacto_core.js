@@ -9,7 +9,7 @@ for (let _category of _categories) {
     add_div_category_005(_category['id'], _category['name'], _category['url']);
 }
 if (sent==1){
-    document.getElementById("contact-alert").innerHTML += '<div class="alert alert-primary alert-lg mb-3 alert-dismissible fade show"><i class="fas fa-check"></i> El mensaje ha sido enviado con éxito. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg width="12px" height="12px"><use xlink:href="images/sprite.svg#cross-12"></use></svg></button></div>'
+    document.getElementById("contact-alert").innerHTML += '<div class="alert alert-success alert-lg mb-3 alert-dismissible fade show"><i class="fas fa-check"></i> El mensaje ha sido enviado con éxito. <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg width="12px" height="12px"><use xlink:href="images/sprite.svg#cross-12"></use></svg></button></div>'
 }
 
 function contact_form(site) {
