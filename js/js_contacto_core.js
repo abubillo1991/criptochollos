@@ -10,8 +10,6 @@ for (let _category of _categories) {
 }
 
 function contact_form() {
-    alert(document.getElementById("form-message").value);
-    alert(document.getElementById("form-subject"));
-    
-    // contact(c_message)
+    c_message='n: '+document.getElementById("form-name").value + 'e: '+document.getElementById("form-email").value + 's: '+document.getElementById("form-subject").value + 'm: '+document.getElementById("form-message").value;
+    contact(c_message)
   }
