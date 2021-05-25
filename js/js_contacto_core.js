@@ -10,7 +10,8 @@ for (let _category of _categories) {
 }
 
 function contact_form() {
-    alert(document.getElementById("form-message").innerHTML);
+    alert(document.getElementById("form-message").value);
+    alert(document.getElementById("form-subject"));
     
     // contact(c_message)
   }
