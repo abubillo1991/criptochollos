@@ -137,18 +137,20 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
 }
 
 function contact(c_message){
-  var xhr = new XMLHttpRequest();
-  xhr.withCredentials = true;
+  var myHeaders = new Headers();
+  myHeaders.append("Access-Control-Allow-Origin", "*");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
   
-  xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      console.log(this.responseText);
-    }
-  });
-  
-  xhr.open("GET", "https://5mus0rdlc0.execute-api.eu-west-3.amazonaws.com/default/criptochollos_contact?"+c_message);
-  
-  r_contact=xhr.send();
+  r_contact=fetch("https://5mus0rdlc0.execute-api.eu-west-3.amazonaws.com/default/criptochollos_contact?id=200", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
 
   console.log(r_contact)
   return r_contact.json()
