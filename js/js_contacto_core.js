@@ -19,9 +19,10 @@ function contact_form(site) {
     }else{
         c_message='n: '+document.getElementById("form-name").value + ', e: '+document.getElementById("form-email").value + ', s: '+document.getElementById("form-subject").value + ', m: '+document.getElementById("form-message").value;
     }
+    console.log(c_message)
     fetch_contact(c_message);
 
-    sleep(500);
+    sleep(50000);
     window.location.replace("?sent=1");
   }
 
