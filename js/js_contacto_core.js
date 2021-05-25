@@ -18,5 +18,17 @@ function contact_form(site) {
     }else{
         c_message='n: '+document.getElementById("form-name").value + ', e: '+document.getElementById("form-email").value + ', s: '+document.getElementById("form-subject").value + ', m: '+document.getElementById("form-message").value;
     }
-    fetch_contact(c_message)
+    fetch_contact(c_message);
+
+    sleep(1000);
+    window.location.replace("?sent=1");
+  }
+
+  function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
   }

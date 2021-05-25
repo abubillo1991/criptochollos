@@ -152,6 +152,4 @@ function fetch_contact(c_message){
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-  //window.location.replace("?sent=1");
-
 }
