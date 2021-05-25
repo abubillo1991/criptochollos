@@ -11,6 +11,6 @@ for (let _category of _categories) {
 
 function contact_form() {
     c_message='n: '+document.getElementById("form-name").value + ', e: '+document.getElementById("form-email").value + ', s: '+document.getElementById("form-subject").value + ', m: '+document.getElementById("form-message").value;
-    r_contact=contact(c_message)
+    r_contact=contact(c_message.json())
     console.log('contact_form: '+r_contact)
   }
