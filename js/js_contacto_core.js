@@ -14,9 +14,9 @@ if (sent==1){
 
 function contact_form(site) {
     if (site == 'publicar-chollo'){
-        c_message='n: '+document.getElementById("form-name").value+',r: '+document.getElementById("form-ref").value+',c: '+document.getElementById("form-code").value+',u: '+document.getElementById("form-user").value+',c_id: '+document.getElementById("form-category_id").value+',d: '+document.getElementById("form-description").value;
+        c_message='t: publicar-chollo, n: '+document.getElementById("form-name").value+',r: '+document.getElementById("form-ref").value+',c: '+document.getElementById("form-code").value+',u: '+document.getElementById("form-user").value+',c_id: '+document.getElementById("form-category_id").value+',d: '+document.getElementById("form-description").value;
     }else{
-        c_message='n: '+document.getElementById("form-name").value + ', e: '+document.getElementById("form-email").value + ', s: '+document.getElementById("form-subject").value + ', m: '+document.getElementById("form-message").value;
+        c_message='t: contacto, n: '+document.getElementById("form-name").value + ', e: '+document.getElementById("form-email").value + ', s: '+document.getElementById("form-subject").value + ', m: '+document.getElementById("form-message").value;
     }
     fetch_contact(c_message);
 
