@@ -151,6 +151,7 @@ function fetch_contact(c_message){
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
+  window.location.replace("?send=1");
 
-  return r_contact.json()
+  return r_contact
 }
