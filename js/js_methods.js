@@ -153,5 +153,4 @@ function fetch_contact(c_message){
 
   window.location.replace("?send=1");
 
-  return r_contact
 }
