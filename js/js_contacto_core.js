@@ -23,7 +23,7 @@ function contact_form(site) {
     fetch_contact(c_message);
 
     sleep(50000);
-    window.location.replace("?sent=1");
+    //window.location.replace("?sent=1");
   }
 
   function sleep(milliseconds) {
