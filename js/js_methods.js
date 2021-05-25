@@ -61,6 +61,10 @@ function add_div_category_005(id, name, url) {
   document.getElementById("div_categories_005").innerHTML += '<li class="mobile-links__item" data-collapse-item><div class="mobile-links__item-title"><a href="index.html?c_id=' + id + '" class="mobile-links__item-link">'+name+'</a></div></li>';
 }
 
+function add_div_category_006(id, name, url) {
+  document.getElementById("form-category_id").innerHTML += '<option value='+id+'>'+name+'</option>';
+}
+
 function add_article_card(id, name, category_id, intro_description, date, score, status, image, price, url, user, ref) {
   console.log(date+"/"+new Date(date))
   _article_card = '<div class="products-list__item"><div class="product-card product-card--hidden-actions ">';
