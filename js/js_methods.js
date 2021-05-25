@@ -12,8 +12,9 @@ function get_query_parameters() {
   var o = url.searchParams.get("o");
   var u = url.searchParams.get("u");
   var o_id = url.searchParams.get("o_id");
+  var sent = url.searchParams.get("sent");
 
-  return { c_id, q, s, o, u, o_id };
+  return { c_id, q, s, o, u, o_id, sent };
 }
 
 function filter_and_order_articles(_articles, c_id, q, s, o) {
