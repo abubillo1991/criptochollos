@@ -19,7 +19,7 @@ function contact_form(site) {
     }else{
         c_message='n: '+document.getElementById("form-name").value + ', e: '+document.getElementById("form-email").value + ', s: '+document.getElementById("form-subject").value + ', m: '+document.getElementById("form-message").value;
     }
-    console.log(c_message)
+    console.log(c_message);
     fetch_contact(c_message);
 
     sleep(50000);
