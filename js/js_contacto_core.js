@@ -8,3 +8,9 @@ for (let _category of _categories) {
     // <!-- *** 005 - Categorias -->
     add_div_category_005(_category['id'], _category['name'], _category['url']);
 }
+
+function contact_form() {
+    alert('clicked');
+    
+    // contact(c_message)
+  }

@@ -134,6 +134,17 @@ function update_offer(o_id,o_name,c_id,o_intro_description,o_date,o_score,o_stat
 
   document.getElementById("offer-footer").innerHTML += '<div class="product__tags tags"><div class="tags__list"><a href="index.html?c_id='+c_id+'">'+c_name+'</a></div></div>';
   document.getElementById("offer-footer").innerHTML += '<div class="product__share-links share-links"><ul class="share-links__list"><li class="share-links__item share-links__item--type--like"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.criptochollos.com/oferta.html?o_id='+o_id+'&u='+o_url+'"><i class="fab fa-facebook-f"></i>  Compartir</a></li><li class="share-links__item share-links__item--type--tweet"><a href="https://twitter.com/intent/tweet?url=https://www.criptochollos.com/oferta.html?o_id='+o_id+'&u='+o_url+'"><i class="fab fa-twitter"></i>  Comparte</a></li><li class="share-links__item share-links__item--type--wapp"><a href="whatsapp://send?text=https://www.criptochollos.com/oferta.html?o_id='+o_id+'&u='+o_url+'" data-action="share/whatsapp/share"><i class="fab fa-whatsapp"></i>  Compartir</a></li></ul></div>';
+}
 
+function contact(c_message){
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  
+  fetch("https://5mus0rdlc0.execute-api.eu-west-3.amazonaws.com/default/criptochollos_contact?"+c_message, requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 
 }
