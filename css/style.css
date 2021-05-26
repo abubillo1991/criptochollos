@@ -4369,6 +4369,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-origin {
   background: #815dc7;
 }
 
+.social-links__link--type--telegram {
+  background: #24a5f8;
+}
+
 .social-links__link--type--rss {
   background: #ffc338;
 }
