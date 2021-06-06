@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- font - fontawesome -->
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    <!-- font - datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <!-- font - stroyka -->
     <link rel="stylesheet" href="fonts/stroyka/stroyka.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -331,8 +333,12 @@
     <script src="js/photoswipe.min.js" type="text/javascript"></script>
     <script src="js/nouislider.min.js" type="text/javascript"></script>
     <script src="vendor/svg4everybody/svg4everybody.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script>
         svg4everybody();
+    </script>
+    <script>
+        $(document).ready( function () {$('#data-table').DataTable();});
     </script>
     
 
