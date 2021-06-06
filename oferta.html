@@ -338,9 +338,10 @@
         svg4everybody();
     </script>
     <script>
-        $(document).ready( function () {$('#data-table').DataTable(
-            {"lengthMenu": [[25, 50, -1], [25, 50, "All"]]}
-        );});
+        $(document).ready( function () {$('#data-table').DataTable({
+            "lengthMenu": [[25, 50, -1], [25, 50, "All"]],
+            "language": {"url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"},
+        });});
     </script>
     
 
