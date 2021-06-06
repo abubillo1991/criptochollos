@@ -338,7 +338,9 @@
         svg4everybody();
     </script>
     <script>
-        $(document).ready( function () {$('#data-table').DataTable();});
+        $(document).ready( function () {$('#data-table').DataTable(
+            {"lengthMenu": [[25, 50, -1], [25, 50, "All"]]}
+        );});
     </script>
     
 
